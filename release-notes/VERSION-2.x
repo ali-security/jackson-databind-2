@@ -4,6 +4,8 @@ Project: jackson-databind
 === Releases === 
 ------------------------------------------------------------------------
 
+#3328: Possible DoS issue
+
 2.11.0 (26-Apr-2020)
 
 #953: i-I case conversion problem in Turkish locale with case-insensitive deserialization
