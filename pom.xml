@@ -16,7 +16,7 @@
   <description>General data-binding functionality for Jackson: works on core streaming API</description>
   <url>http://github.com/FasterXML/jackson</url>
   <inceptionYear>2008</inceptionYear>
-  <licenses>
+  <licenses> 
     <license>
       <name>The Apache Software License, Version 2.0</name>
       <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
