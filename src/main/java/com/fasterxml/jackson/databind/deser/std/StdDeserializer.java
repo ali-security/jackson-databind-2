@@ -735,7 +735,12 @@ public abstract class StdDeserializer<T>
                 }
             }
             if (ctxt.isEnabled(DeserializationFeature.UNWRAP_SINGLE_VALUE_ARRAYS)) {
+				if (ctxt.getPrimitiveRecursionDepth() >= maxRecursionDepth) {
+					handleNestedArrayForSingle(p, ctxt);
+				}
+				ctxt.incPrimitiveRecursionDepth();
                 final T parsed = deserialize(p, ctxt);
+				ctxt.resetPrimitiveRecursionDepth();
                 if (p.nextToken() != JsonToken.END_ARRAY) {
                     handleMissingEndArrayForSingle(p, ctxt);
                 }
